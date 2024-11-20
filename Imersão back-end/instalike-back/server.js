@@ -1,4 +1,6 @@
-import express from "express";
+import express from 'express';
+import conectarAoBanco from "./src/config/dbConfig.js";
+await conectarAoBanco(process.env.MONGODB_URI);
 
 const posts = [
     { id: 1, descricao: "Uma foto teste", imagem: "https://placecats.com/millie/300/150" },
